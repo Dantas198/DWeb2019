@@ -1,0 +1,43 @@
+body{
+    background-color: #fefefe;
+    text-align: justify;
+    font-family:Open Sans,Arial;
+    color:#454545;
+    margin:auto; 
+    max-width: 55%;
+    line-height:1.4;
+}
+
+div.posImage img.imgL {
+    float:left;
+    width:40%;
+    overflow: hidden;
+    margin-right: 1em;
+}
+
+div.posImage img.imgR {
+    float: right;
+    width:40%;
+    overflow: hidden;
+    margin-left: 1em;
+}
+
+div.posImage div.textL {
+    float:left;
+    width:55%
+}
+
+div.posImage div.textR {
+    float:right;
+    width:55%
+}
+
+div.posImage div.textL p:first-child {
+    margin-top:0
+}
+
+div.posImage:after {
+display:block;
+content:"";
+clear:both
+}
