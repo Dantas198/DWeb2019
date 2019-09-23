@@ -6,8 +6,13 @@ body{
     margin:auto; 
     max-width: 55%;
     line-height:1.4;
+    margin-bottom:3em;
 }
-
+p.cp {
+    margin-top:3em;
+   text-align: center;
+    
+}
 div.posImage img.imgL {
     float:left;
     width:40%;
@@ -37,7 +42,7 @@ div.posImage div.textL p:first-child {
 }
 
 div.posImage:after {
-display:block;
-content:"";
-clear:both
+    display:block;
+    content:"";
+    clear:both
 }
