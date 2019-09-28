@@ -1,0 +1,3 @@
+a) //ARQELEM[normalize-space(CONCEL) = "Amares"]/IDENTI
+b) /ARQSITS/ARQELEM/CONCEL
+c) //ARQELEM[normalize-space(CONCEL) = "Montalegre"]/DESCRI
