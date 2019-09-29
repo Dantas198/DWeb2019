@@ -3,22 +3,29 @@
 <project-record>
     <header>
         <key-name></key-name>
-        <title></title>
-        <begin-date></begin-date>
-        <end-date></end-date>
+        <title>TP2</title>
+        <begin-date>Setembro 2019</begin-date>
+        <end-date>Setembro 2019</end-date>
         <supervisor>
-            <link url=""></link>
+            <link url="www.di.uminho.pt/~jcr">José Carlos Ramalho</link>
         </supervisor>
     </header>
     <workteam>
         <element>
-            <name></name>
-            <number></number>
-            <email></email>
-            <github></github>
+            <name>Marco Filipe Leitão Dantas</name>
+            <number>81736</number>
+            <email>a81736@alunos.uminho.pt</email>
+            <github>https://github.com/Dantas198</github>
         </element>
     </workteam>
-    <abstract></abstract>
-    <deliverables></deliverables>
-    <date></date>
+    <abstract>
+        <p>Preenchimento de um project-record e definição do seu dtd</p>
+        <p>Resolução dos exercícios 6 e 7 <link url="http://www4.di.uminho.pt/~jcr/XML/CURSOS/PED2008/fichas/ficha3/index.html">ficha 3</link> relativos a DTD's e XPATH</p>
+    </abstract>
+    <deliverables>
+        <link url="pr.dtd">documento dtd do project-record</link>
+        <link url="arq.dtd">Resolução do exercício 7 (ficha3)</link>
+        <link url="arq.txt">Resolução do exercício 6 (ficha3)</link>
+    </deliverables>
+    <date>29-09-2019</date>
 </project-record>
