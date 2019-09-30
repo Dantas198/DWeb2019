@@ -19,7 +19,9 @@
 <!ELEMENT email (#PCDATA) >
 
 <!ELEMENT abstract (p*) >
-<!ELEMENT p (#PCDATA|link)* >
+<!ELEMENT p (#PCDATA|link|italic|bold)* >
+<!ELEMENT italic (#PCDATA) >
+<!ELEMENT bold (#PCDATA) >
 
 <!ELEMENT deliverables (link*) >
 
