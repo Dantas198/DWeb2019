@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pr SYSTEM "pr.dtd">
+<pr>
+    <metadata>
+        <keyname>TP3</keyname>
+        <title>Contrução de websites utilizando xsl</title>
+        <supervisor homepage="www.di.uminho.pt/~jcr">José Carlos Ramalho</supervisor>
+        <bdate>Outubro 2019</bdate>
+        <edate>Outubro 2019</edate>
+    </metadata>
+    <workteam>
+        <worker>
+            <identifier>81736</identifier>
+            <name>Marco Filipe Leitão Dantas</name>
+            <email>a81736@alunos.uminho.pt</email>
+            <git>https://github.com/Dantas198</git>
+        </worker>
+    </workteam>
+    <abstract>
+        <p>Preenchimento de um <b>project-record</b> para posterior conversão em página <i>html</i>, através de xsl</p>
+        <p>Conversão em página html do xml referente aos <b>arqueosítios</b>, através de xsl <xref url="pr.xsl">pr</xref></p>
+    </abstract>
+    <deliverables>
+        <deliverable path="pr.xml">Documento com informação do project-record</deliverable>
+        <deliverable path="pr.xsl">Documento para transformar o xml do project-record em html</deliverable>
+        <deliverable path="arq.xsl">Documento para transformar o xml dos arquesítios em html </deliverable>
+        <deliverable path="arq.xml">Documento com informação dos arqueosítios</deliverable>
+        <deliverable path="websiteArqueositios/website.html">Website gerado a partir dos arqueosítios</deliverable>
+    </deliverables>
+</pr>
