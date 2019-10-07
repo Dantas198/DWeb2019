@@ -47,7 +47,7 @@
                         <img src="{IMAGEM/@NOME}" alt="{IMAGEM/@NOME} em falta!"/>
                         
                         <h3>Descrição</h3>
-                        <xsl:apply-templates select="DESCRI"/>
+                        <p><xsl:value-of select="DESCRI"/></p>
                         
                         <h3>Informações de localização</h3>
                         <table class="w3-table">
