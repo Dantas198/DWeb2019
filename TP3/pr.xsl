@@ -109,6 +109,10 @@
         <xsl:template match="b">
             <b><xsl:apply-templates/></b>
         </xsl:template>
+    
+        <xsl:template match="u">
+            <u><xsl:apply-templates/></u>
+        </xsl:template>
         
         <xsl:template match="xref">
            <a href="{@url}"><xsl:value-of select="."/></a>
