@@ -20,9 +20,6 @@ http.createServer(function (req, res) {
         case "index":
             sender(res, "index.html", "text/html")
             break;
-        //case /arq[1-9]+\.xml/.test(qstr):
-          //  sender(res, "dataset/" + qstr, "text/html")
-           // break;
         default:
             sender(res, 'dataset/arq' + qstr + '.xml', "text/xml")
             break;

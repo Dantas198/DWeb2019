@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pr SYSTEM "pr.dtd">
+<pr>
+    <metadata>
+        <keyname>TP4</keyname>
+        <title>Contrução de um servidor em Node.js</title>
+        <supervisor homepage="https://www.di.uminho.pt/~jcr">José Carlos Ramalho</supervisor>
+        <bdate>Outubro 2019</bdate>
+        <edate>Outubro 2019</edate>
+    </metadata>
+    <workteam>
+        <worker>
+            <identifier>81736</identifier>
+            <name>Marco Filipe Leitão Dantas</name>
+            <email>a81736@alunos.uminho.pt</email>
+            <git>https://github.com/Dantas198</git>
+        </worker>
+    </workteam>
+    <abstract>
+        <p>Construção de um servidor em Node.js para responder a pedidos de páginas de arqueossítios</p>
+        <p>
+           As páginas dos arqueossítios são obtidas partindo do ficheiro <xref url="arq.xml">arq</xref> em 
+           diversas páginas xml de cada arqueossítio.
+        </p>
+        <p>
+            Estas páginas podem ser acedidas através de um <xref url="index.html">indice</xref>. Ao aceder a uma
+            página xml o servidor irá pedir uma stylesheet <xref url="arq2html.xsl">xsl</xref> para transformar a página 
+            xml em html.
+        </p>
+    </abstract>
+    <deliverables>
+        <deliverable path="arq2html.xsl">Stylesheet para transformar uma página arq.xml em arq.html</deliverable>
+        <deliverable path="index.html">Indice de arqueossítios por concelhos</deliverable>
+        <deliverable path="index.xsl">Stylesheet que constroi o index.html</deliverable>
+        <deliverable path="xml-split.xsl">Stylesheet para separar os arqueossítios</deliverable>
+        <deliverable path="servidor.js">Servidor para atender pedidos</deliverable>
+    </deliverables>
+</pr>
