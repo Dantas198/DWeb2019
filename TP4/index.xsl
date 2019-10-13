@@ -37,9 +37,9 @@
     </xsl:template>
     
     <xsl:template match="IDENTI">
-        <li>
-            <a name="{count(preceding-sibling::*)+1}"/>
-            <a href="{count(preceding-sibling::*)+1}"><xsl:value-of select="."/></a>
-        </li>
+            <li>
+                //<a name="{generate-id()}"/>
+                <a href="{count(../preceding-sibling::*)+1}"><xsl:value-of select="."/></a>
+            </li>
     </xsl:template>    
 </xsl:stylesheet>
