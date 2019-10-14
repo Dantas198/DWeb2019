@@ -5,25 +5,17 @@ var fs = require('fs')
 
 http.createServer(function (req, res) {
     var partes = req.url.split('/')
-    var qstr = partes[partes.length-1]
-    console.log(qstr)
-    switch(qstr){
-        case "taca.gif":
-            sender(res, "dataset/taca.gif", "image/gif")
-            break;
-        case "favicon.ico":
-            sender(res, "dataset/favicon.ico", "image/x-icon")
-            break;
-        case "arq2html.xsl":
-            sender(res, qstr, "text/xml")
-            break;
-        case "index":
-            sender(res, "index.html", "text/html")
-            break;
-        default:
-            sender(res, 'dataset/arq' + qstr + '.xml', "text/xml")
-            break;
-    }
+    var qstr = partes[partes.length - 1]
+    var str = qstr.split('.')
+
+    var contentType = str[partes.length - 1]
+    if(contentType == undefined)
+        sender(res, 'dataset/arq' + qstr + '.xml', "text/xml");
+    else
+        if(contentType == "ico" | contentType == "gif")
+            sender(res,'dataset/' + qstr, contentType)
+        else
+            sender(res, qstr, contentType )
 }).listen(12345)
 
 console.log('Servidor à escuta na porta 12345.....')
