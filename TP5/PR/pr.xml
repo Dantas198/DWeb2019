@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="../TP3/pr.xsl"?>
+<!DOCTYPE pr SYSTEM "pr.dtd">
+<pr>
+    <metadata>
+        <keyname>TP5</keyname>
+        <title>Contrução de um servidor em Node.js para gestão de tarefas</title>
+        <supervisor homepage="https://www.di.uminho.pt/~jcr">José Carlos Ramalho</supervisor>
+        <bdate>Outubro 2019</bdate>
+        <edate>Outubro 2019</edate>
+    </metadata>
+    <workteam>
+        <worker>
+            <identifier>81736</identifier>
+            <name>Marco Filipe Leitão Dantas</name>
+            <email>a81736@alunos.uminho.pt</email>
+            <git>https://github.com/Dantas198</git>
+        </worker>
+    </workteam>
+    <abstract>
+        <p>Construção de um servidor em Node.js responsável por gerir tarefas. Esta gestão inclui a criação de novas tarefas e 
+           a remoção de tarefas cuja data limite já expirou. Também poderão ser vizualizadas todas as tarefas</p>
+    </abstract>
+    <deliverables>
+        <deliverable path="erro.pug">Ficheiro com o template para a página de erro que será mostrada no browser</deliverable>
+        <deliverable path="front-page.pug">Ficheiro com o template para a página principal da gestão de tarefas</deliverable>
+        <deliverable path="layout.pub">Ficheiro com o layout para todos os outros templates</deliverable>
+        <deliverable path="gestaoTarefas.js">Servidor que irá atender os pedidos</deliverable>
+        <deliverable path="tarefas.json">Base de dados para as tarefas</deliverable>
+    </deliverables>
+</pr>
