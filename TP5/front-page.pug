@@ -1,0 +1,31 @@
+extends layout
+block content
+    .w3-container
+        .w3-card-4
+            header.w3-container
+                h3 Registo de um aluno
+            .w3-container
+                form.w3-container(action='/tarefa' method='POST')
+                    label.w3-teal
+                        b Nome
+                    input.w3-input.w3-border.w3-light-grey(type='text' name='nome')
+                    label.w3-teal
+                        b Data Limite
+                    input.w3-input.w3-border.w3-light-grey(type='date' name='data_limite')
+                    input.w3-btn.w3-blue-grey(type='submit' value='Enviar')
+            .w3-container
+                form.w3-container(method='post' id="tarefasvelhas")
+                    input.w3-btn.w3-blue-grey(type='submit' value='Apagar tarefas antigas')
+            .w3-container
+                .w3-card-4
+                    header.w3-container
+                        table.w3-table-all
+                            tr
+                                th Nome
+                                th Data Limite
+                            each t in lista
+                                tr
+                                    td= t.nome
+                                    td= t.data_limite
+                footer.w3-container.w3-teal
+            
