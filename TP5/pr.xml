@@ -26,6 +26,7 @@
         <deliverable path="front-page.pug">Ficheiro com o template para a página principal da gestão de tarefas</deliverable>
         <deliverable path="layout.pub">Ficheiro com o layout para todos os outros templates</deliverable>
         <deliverable path="gestaoTarefas.js">Servidor que irá atender os pedidos</deliverable>
+        <deliverable path="apagaVelhas.js">Script para mandar o método delete ao servidor, para apagar as tarefas expiradas</deliverable>
         <deliverable path="tarefas.json">Base de dados para as tarefas</deliverable>
     </deliverables>
 </pr>

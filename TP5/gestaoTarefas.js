@@ -42,8 +42,22 @@ var myServer = http.createServer((req,res) => {
                     res.end()
                 })   
         }
+        else if(purl.pathname == '/apagaVelhas.js'){
+            res.writeHead(200, {'Content-Type': 'text/javascript'})
+            fs.readFile('apagaVelhas.js', (erro, dados) =>{
+                if(erro){
+                    res.write(pug.renderFile('erro.pug', {e: "Script não encontrado...."}))
+                    res.end()
+                    console.log("erro de styleshet")
+                    return
+                }
+                console.log("getting script")
+                res.write(dados)
+                res.end()
+            })   
+    }
             else {
-                console.log("erro de path")
+                console.log("erro de path 2")
                 res.writeHead(200, {
                     'Content-Type' : 'text/html; charset=utf-8'
                 })
@@ -85,7 +99,7 @@ var myServer = http.createServer((req,res) => {
                 jsonfile.readFile(myBD, (erro, tarefas) =>{
                     if(!erro){
                         tarefasfaziveis = filter(tarefas)
-                        jsonfile.writeFile(myBD, tarefas, erro2 =>{
+                        jsonfile.writeFile(myBD, tarefasfaziveis, erro2 =>{
                             if(erro2)
                                 console.log(erro)
                             else{
