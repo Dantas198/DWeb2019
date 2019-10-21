@@ -23,6 +23,7 @@ var myServer = http.createServer((req,res) => {
                     console.log("erro no get")
                     return
                 }
+                setExpireDate(tarefas)
                 res.write(pug.renderFile('front-page.pug', {lista: tarefas}))
                 res.end();
                 console.log("get com sucesso")
@@ -133,6 +134,22 @@ myServer.listen(12345, ()=>{
     console.log("Servidor à escuta na porta 12345")
 })
 
+function setExpireDate(tarefas){
+    for(tarefa of tarefas){
+        var t = new Date(tarefa.data_limite) - Date.now()
+        var d = Math.abs(Math.ceil(t/(1000 * 60 * 60 * 24)))
+        if(d == 0){
+            d += " dias. Está quase a acabar o tempo!"
+        } 
+        else{
+            d += " dias. Está tranquilo"
+            if(t < 0 ){
+                d += " atrás. Já foste..."
+            }
+        }
+        tarefa.tempo_restante = d
+    }
+}
 function recuperaInfo(request, callback){
     if(request.headers['content-type'] == 'application/x-www-form-urlencoded'){
         let body = ''

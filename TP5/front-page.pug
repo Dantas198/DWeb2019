@@ -6,16 +6,18 @@ block content
                 h3 Gestor de Tarefas
             .w3-container
                 form.w3-container(action='/tarefa' method='POST')
-                    label.w3-teal
+                    label.w3-blue-grey
                         b Nome
                     input.w3-input.w3-border.w3-light-grey(type='text' name='nome')
-                    label.w3-teal
+                    label.w3-blue-grey
                         b Data Limite
                     input.w3-input.w3-border.w3-light-grey(type='date' name='data_limite')
                     input.w3-btn.w3-blue-grey(type='submit' value='Enviar')
             .w3-container
                 .w3-container
-                    input.w3-btn.w3-blue-grey(type='button' value='Apagar tarefas' onclick='apagarVelhas()')
+                    input.w3-btn.w3-blue-grey(type='button' value='Apagar tarefas expiradas' onclick='apagarVelhas()')
+            header.w3-container
+                h4 Tarefas
             .w3-container
                 .w3-card-4
                     header.w3-container
@@ -23,9 +25,11 @@ block content
                             tr
                                 th Nome
                                 th Data Limite
+                                th Tempo Restante
                             each t in lista
                                 tr
                                     td= t.nome
                                     td= t.data_limite
+                                    td= t.tempo_restante
                 footer.w3-container.w3-teal
             
