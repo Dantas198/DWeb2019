@@ -13,11 +13,9 @@ block content
                     header.w3-container
                         table.w3-table-all
                             tr  
-                                th Id
                                 th Título
                             each m in lista
                                 tr  
-                                    td= m.id
                                     td= m.tit
                                     td
                                         a(class='w3-button' href='/musicaInfo/' + m.id) Info

@@ -38,7 +38,7 @@ module.exports = {
         this.getAllMusics((erro, musicas) =>{
             if(!erro){
                 musicas.push(musica) 
-                jsonfile.writeFile(myDB, musicas, erro => {
+                jsonfile.writeFile(myDB, musicas, {spaces : 2}, erro => {
                     if(erro) 
                         callback(erro)
                     else {
@@ -59,7 +59,7 @@ module.exports = {
                 var index = musicas.findIndex(m => m.id == id)
                 if(index > -1){
                     musicas.splice(index, 1)
-                    jsonfile.writeFile(myDB, musicas, erro => {
+                    jsonfile.writeFile(myDB, musicas, {space : 2}, erro => {
                         if(erro) 
                             callback(erro)
                         else{ 
