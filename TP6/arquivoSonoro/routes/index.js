@@ -19,15 +19,28 @@ router.get('/', function(req, res, next) {
   })
 });
 
-router.get('/editar/:id', function(req, res, next) {
+router.get('/musicaEdit/:id', function(req, res, next) {
   mMethod.getMusicById(req.params.id, (erro, musica) => {
     if(!erro)
-      res.render('edit', {m :musica})  
+      res.render('editform', {m :musica})  
     else
       res.render('error', {error, erro})
   })
 })
 
+router.get('/musicaInfo/:id', function(req, res, next) {
+  mMethod.getMusicById(req.params.id, (erro, musica) => {
+    if(!erro){
+      res.render('musica', {m :musica}) } 
+    else
+      res.render('error', {error, erro})
+  })
+})
+
+
+router.get('/addform', function(req, res, next){
+  res.render('addform')
+})
 router.get('/*', function(req, res) {
   res.render('error', {error: "O método GET não suporta esse caminho"})
 });

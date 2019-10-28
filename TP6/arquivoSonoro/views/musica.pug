@@ -1,0 +1,37 @@
+extends layout
+block content
+
+    .w3-container
+        p
+            h3 Id da Música
+            = m.id
+        p
+            h3 Título
+            = m.tit
+        p
+            h3 Duração
+            = m.duracao
+        p
+            h3 Província
+            = m.prov
+        if(m.local)
+            p 
+                h3 Local
+                = m.local
+        p 
+            h3 Músico  
+            = m.musico
+        if(m.inst)
+            p 
+                h3 Instrumento
+                = m.inst
+        p 
+            h3 Ficheiro
+            ul  
+                li
+                    h4 Formato
+                    = m.file["@t"]
+                li
+                    h4 Nome
+                    = m.file["#text"]
+        

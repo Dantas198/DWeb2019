@@ -2,27 +2,27 @@ extends layout
 block content
     .w3-container
         .w3-card-4
-            h1 Arquivo Sonoro de Ernesto Valverde
+            header.w3-container
+                h1 Arquivo Sonoro de Ernesto Valverde
+            .w3-container
+                ul.w3-ul
+                    li
+                        a(class='w3-button' href='/addform') Adicionar uma Música
+            .w3-container
                 .w3-card-4
                     header.w3-container
-                        h3 Nova Música
-                           include form
-            .w3-card-4
-                header.w3-container
-                    table.w3-table-all
-                        tr  
-                            th Título
-                            th Província
-                            th Local
-                            th Musico
-                        each m in lista
+                        table.w3-table-all
                             tr  
-                                td= m.tit
-                                td= m.prov
-                                td= m.local
-                                td= m.musico
-                                td
-                                    button.w3-button.w3-circle.w3-blue-grey(onclick="apagarMusica('" + m.id +"')") Apagar
-                                td
-                                    a(class='button' href='/editar/' + m.id) Editar
-            footer.w3-container.w3-teal
+                                th Id
+                                th Título
+                            each m in lista
+                                tr  
+                                    td= m.id
+                                    td= m.tit
+                                    td
+                                        a(class='w3-button' href='/musicaInfo/' + m.id) Info
+                                    td
+                                        button.w3-button(onclick="apagarMusica('" + m.id +"')") Apagar
+                                    td
+                                        a(class='w3-button' href='/musicaEdit/' + m.id) Editar
+                footer.w3-container.w3-teal

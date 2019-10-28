@@ -1,0 +1,30 @@
+extends layout
+block content
+    .w3-container
+        form.w3-container(action='/' method='POST')
+            label
+                b Título
+            input.w3-input.w3-border.w3-light-grey(type='text' name='tit')
+            label
+                b Duracao
+            input.w3-input.w3-border.w3-light-grey(type='text' name='duracao')
+            label
+                b Provincia 
+            input.w3-input.w3-border.w3-light-grey(type='text' name='prov')
+            label
+                b Local 
+            input.w3-input.w3-border.w3-light-grey(type='text' name='local')
+            label
+                b Musico 
+            input.w3-input.w3-border.w3-light-grey(type='text' name='musico')
+            label
+                b Link ficheiro 
+            input.w3-input.w3-border.w3-light-grey(type='text' name='file["@t"]')
+            label
+                b Nome ficheiro 
+            input.w3-input.w3-border.w3-light-grey(type='text' name='file["#text"]')
+            input.w3-btn.w3-blue-grey(type='submit' value='Enviar')
+    .w3-container
+        .w3-container
+            hr
+            a(class='button' href='/') Voltar à página principal
