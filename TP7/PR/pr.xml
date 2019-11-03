@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="../TP3/pr.xsl"?>
+<!DOCTYPE pr SYSTEM "pr.dtd">
+<pr>
+    <metadata>
+        <keyname>TP6</keyname>
+        <title>Contrução de um servidor em Node.js para gestão de tarefas</title>
+        <supervisor homepage="https://www.di.uminho.pt/~jcr">José Carlos Ramalho</supervisor>
+        <bdate>Outubro 2019</bdate>
+        <edate>Outubro 2019</edate>
+    </metadata>
+    <workteam>
+        <worker>
+            <identifier>81736</identifier>
+            <name>Marco Filipe Leitão Dantas</name>
+            <email>a81736@alunos.uminho.pt</email>
+            <git>https://github.com/Dantas198</git>
+        </worker>
+    </workteam>
+    <abstract>
+        <p>
+            Criação de um servidor em nodejs utilizando a framework express. Este servidor vai responder operações CRUD.
+        </p>
+        <p>
+            Esta aplicação irá mostrar as músicas existentes no ficheiro que serve como base de dados vai permitir editar,
+            apagar, adicionar músicas e ainda vizualizar informações detalhadas de uma música.
+        </p>
+    </abstract>
+    <deliverables>
+        <deliverable path="../arquivoSonoro/public/javascripts/apagar.js">Funções js para executar o método DELETE e apagar uma música</deliverable>
+        <deliverable path="../arquivoSonoro/public/javascripts/editar.js">Funções js para executar o método PUT e editar uma música</deliverable>
+        <deliverable path="../arquivoSonoro/public/javascripts/geraIds.js">funções js para gerar id's no ficheiro json</deliverable>
+        <deliverable path="../arquivoSonoro/public/stylesheets/style.css">Stylesheet para os ficheiros html</deliverable>
+        <deliverable path="../arquivoSonoro/routes/index.js">Rotas possíveis para toda a aplicação</deliverable>
+        <deliverable path="../arquivoSonoro/routes/musicaMethods.js">Métodos para ler e escrever no ficheiro json e executar a lógica dos métodos CRUD</deliverable>
+        <deliverable path="../arquivoSonoro/views/addform.pug">Template para o formulário de adicionar uma música</deliverable>
+        <deliverable path="../arquivoSonoro/views/editform.pug">Template para o formulário de editar uma música</deliverable>
+        <deliverable path="../arquivoSonoro/views/erro.pug">Template para a página de erro</deliverable>
+        <deliverable path="../arquivoSonoro/views/index.pug">Template para a página principal da aplicação</deliverable>
+        <deliverable path="../arquivoSonoro/views/layout.pug">Template para o layout</deliverable>
+        <deliverable path="../arquivoSonoro/views/addform.pug">Template para a página de informações de uma música</deliverable>
+        <deliverable path="../arquivoSonoro/app.js">Ficheiro de configuração para a aplicação</deliverable>
+        <deliverable path="../arquivoSonoro/arq.json">Ficheiro json que contém as músicas</deliverable>
+    </deliverables>
+</pr>
