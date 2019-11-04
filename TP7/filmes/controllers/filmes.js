@@ -13,7 +13,7 @@ Filmes.listar  = () =>{
 
 Filmes.apagar = id => {
     return Filme
-            .findOneAndDelete({_id: ObjectId(id)}, {useFindAndModify : false})
+            .findOneAndDelete({_id: ObjectId(id)})
             .exec()
             
 }
@@ -30,22 +30,20 @@ Filmes.adicionar = dados => {
 }
 
 Filmes.modificar = (id, dados) => {
-    return Filme.findOneAndUpdate({_id: ObjectId(id)}, dados, {useFindAndModify : false})
+    return Filme.findOneAndUpdate({_id: ObjectId(id)}, dados)
                 .exec()
                 //ver se dá
 }
-/*
+
 Filmes.contar = () =>{
     return Film.countDocuments().exec()
 }
 
-
-Filmes.projetar  = () =>{
+Filmes.listarPagina = (page) => {
     return Filme
-            .find({},campos)
-            .exec()
+        .find({}, {})
+        .skip((page)*30)
+        .limit(30)
+        .sort({title:1})
+        .exec()
 }
-
-Filmes.agregar = campo=>{
-    return Filme.aggregate([{$group: {_id: "$" + campo, contador: {$sum:1}}}, {$sort: {contador:-1}}]).exec()
-}*/
