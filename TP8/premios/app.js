@@ -11,6 +11,10 @@ mongoose.connect('mongodb://127.0.0.1:27017/premios', {useNewUrlParser: true, us
 mongoose.set('useFindAndModify', false);
 
 var apiRouter = require('./routes/api');
+var indexRouter = require('./routes/index');
+var categoriasRouter = require('./routes/categorias');
+var laureadosRouter = require('./routes/laureados');
+var premiosRouter = require('./routes/premios');
 var app = express();
 
 // view engine setup
@@ -22,6 +26,11 @@ app.use(express.json());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/api', apiRouter);
+app.use('/', indexRouter);
+app.use('/categorias', categoriasRouter);
+app.use('/laureados', laureadosRouter);
+app.use('/premios', premiosRouter);
+
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

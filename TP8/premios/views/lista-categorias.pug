@@ -1,0 +1,11 @@
+extends layout
+block content
+    .w3-container
+        .w3-card-4
+            header.w3-container
+                h1 Categorias
+        .w3-container
+            ul.w3-ul
+                each c in lista
+                    li= c 
+        a(class='w3-button' href='/') Homepage

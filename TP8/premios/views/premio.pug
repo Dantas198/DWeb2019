@@ -1,0 +1,26 @@
+extends layout
+block content
+    .w3-container
+        .w3-card-4
+            header.w3-container
+                h1= premio.year + " Nobe Prize of " + premio.category
+                .w3-container
+                    if(premio.overallMotivation != undefined)
+                        header.w3-container
+                            h2 Overall Motivation
+                            i= premio.overallMotivation 
+                .w3-container
+                    header.w3-container
+                        h2 List of laureates
+                    each l in premio.laureates
+                        br
+                        .w3-container
+                            ul.w3-ul
+                                li= "Id: " + l.id
+                                li= "Name: " + l.firstname + ' ' + l.surname
+                                li= "Motivation: " + l.motivation
+                                li= "Share: " + l.share 
+
+
+
+                

@@ -1,0 +1,29 @@
+extends layout
+block content
+    .w3-container
+        .w3-card-4
+            header.w3-container
+                h1 Prizes
+                .w3-container
+                form.w3-half.w3-container(action='/premios' method='GET')
+                    label
+                        b Category
+                    input.w3-input.w3-border.w3-light-grey(type='text' name='categoria')
+                    label
+                        b Year
+                    input.w3-input.w3-border.w3-light-grey(type='text' name='data')
+                    input.w3-btn(type="submit" value="Submeter")
+                    address
+                        a(class="w3-button" href="http://localhost:3000/") Homepage
+                table.w3-table-all
+                    tr  
+                        th Year
+                        th Category
+                        th Options
+                    each p in lista
+                        tr  
+                            td= p.year 
+                            td= p.category
+                            td
+                                a(class='w3-button' href='/premios/' + p._id) Details
+                                       

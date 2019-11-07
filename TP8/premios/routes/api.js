@@ -6,7 +6,7 @@ var Premios= require('../controllers/premios')
 router.get('/premios', function(req, res) {
   let l = Object.keys(req.query).length
   let categoria = req.query.categoria
-  let data = Number(req.query.data)
+  let data = req.query.data
   switch(l){
     case 0:
       Premios.listar()

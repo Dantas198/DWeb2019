@@ -6,7 +6,7 @@ const ObjectId = mongoose.Types.ObjectId
 module.exports.listar = () =>{
     return Premios
                 .find()
-                .select({year:1, category:1, _id:0})
+                .select({year:1, category:1})
                 .exec()
 }
 
