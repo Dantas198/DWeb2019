@@ -10,15 +10,13 @@ block content
                                 th Ano
                                 th Categoria
                             each l in lista
-                                if(l.prize.length == 1)
-                                    tr  
-                                        td= l.firstname + ' ' + l.surname
-                                        td= l.prize[0].year
-                                        td= l.prize[0].category
-                                else
-                                    tr
-                                        td= l.firstname + ' ' + l.surname
-                                        each p in l.prize
+                                tr  
+                                    td= l.firstname + ' ' + l.surname
+                                    td= l.prize[0].year
+                                    td= l.prize[0].category
+                                if(l.prize.length > 1)
+                                    each p,i in l.prize
+                                        if(i > 0)
                                             tr
                                                 td= '-'
                                                 td= p.year 

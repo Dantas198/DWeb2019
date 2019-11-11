@@ -19,10 +19,14 @@ router.get('/', function(req, res) {
   let categoria = req.query.categoria
   let data = req.query.data
   if( l != 0){
-    if(l == 1)
+    if(categoria && data)
+    path += '?categoria=' + categoria + '&data=' + data
+    else if(categoria)
         path += '?categoria=' + categoria
-    else
-        path += '?categoria=' + categoria + '&data=' + data
+    else{
+        res.render('error', {error: "Argumentos inválidos"})
+        return;
+      }
     }
     console.log(path)
   axios.get(path)
@@ -33,5 +37,9 @@ router.get('/', function(req, res) {
       res.render('error', {error: erro})
     })
 })
+
+router.get('/*', function(req, res) {
+  res.render('error', {error: "O método GET não suporta esse caminho"})
+});
 
 module.exports = router;

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="../TP3/pr.xsl"?>
+<!DOCTYPE pr SYSTEM "pr.dtd">
+<pr>
+    <metadata>
+        <keyname>TP8</keyname>
+        <title>Contrução de um servidor em Node.js para responder a pedidos sobre uma BD de prémios Nobel</title>
+        <supervisor homepage="https://www.di.uminho.pt/~jcr">José Carlos Ramalho</supervisor>
+        <bdate>novembro 2019</bdate>
+        <edate>novembro 2019</edate>
+    </metadata>
+    <workteam>
+        <worker>
+            <identifier>81736</identifier>
+            <name>Marco Filipe Leitão Dantas</name>
+            <email>a81736@alunos.uminho.pt</email>
+            <git>https://github.com/Dantas198</git>
+        </worker>
+    </workteam>
+    <abstract>
+        <p>
+            Criação de um servidor em nodejs utilizando a framework express. Criação de um router para controlar pedidos à API e de 
+            routers para controlar os pedidos feitos à página web e que fazem pedidos à API. Irá ser utilizada
+            uma base de dados de prémios Nobel e gerida a partir do mongoDB.
+        </p>
+        <p>
+            O métodos encontrados na API são os que foram pedidos no exercício 1 da ficha <xref url="http://www4.di.uminho.pt/~jcr/AULAS/didac/RepFichas/site/fichas/dweb2019-e2.html">dweb2019-e2</xref>
+        </p>
+        <p>
+            Para além da API pedida foi criado um front-end para permitir a um utilizador fazer os pedidos que são permitidos. Este front-end
+            é constituído por páginas de índice, premios, categorias e laureados, onde podem ser vizualizados os pedidos feitos à API. 
+        </p>
+    </abstract>
+    <deliverables>
+        <deliverable path="../premios/public/stylesheets/style.css">Stylesheet para os ficheiros html</deliverable>
+        <deliverable path="../premios/routes/api.js">Rotas possíveis para obter dados da API</deliverable>
+        <deliverable path="../premios/routes/index.js">Rota para fornecer a página de índice com as várias opções</deliverable>
+        <deliverable path="../premios/routes/premios.js">Rotas possíveis para obter dados relacionados com prémios</deliverable>
+        <deliverable path="../premios/routes/categorias.js">Rotas possíveis para obter dados relacionados com categorias</deliverable>
+        <deliverable path="../premios/routes/laureados.js">Rotas possíveis para obter dados relacionados com laureados</deliverable>
+        <deliverable path="../premios/views/lista-categorias.pug">Template para a página de listagem de categorias</deliverable>
+        <deliverable path="../premios/views/lista-laureados.pug">Template para a página de listagem de laureados</deliverable>
+        <deliverable path="../premios/views/lista-premios.pug">Template para a página de listagem de prémios</deliverable>
+        <deliverable path="../premios/views/premio.pug">Template para a página de informações detalhadas de um prémio nobel</deliverable>
+        <deliverable path="../premios/views/error.pug">Template para a página de erro</deliverable>
+        <deliverable path="../premios/views/index.pug">Template para a página principal da aplicação</deliverable>
+        <deliverable path="../premios/views/layout.pug">Template para o layout</deliverable>
+        <deliverable path="../premios/app.js">Ficheiro de configuração para a aplicação</deliverable>
+        <deliverable path="../premios/controllers/premios.js">Ficheiro que representa um controlador com funções que permitem efetuar operações à BD</deliverable>
+        <deliverable path="../premios/models/premios.js">Ficheiro com o modelo de um prémio</deliverable>
+    </deliverables>
+</pr>

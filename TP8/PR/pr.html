@@ -1,0 +1,92 @@
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>
+                        Project-Record 
+                    </title>
+<meta charset="UTF8">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+</head>
+<body>
+<div class="w3-container">
+<h1 class="w3-center">Project Record</h1>
+</div>
+    <div class="w3-container">
+<hr>
+<table class="w3-table">
+<tr>
+<td><b>KEY NAME: </b>TP8</td>
+</tr>
+<tr>
+<td><b>TITLE: </b>Contrução de um servidor em Node.js para responder a pedidos sobre uma BD de prémios Nobel</td>
+</tr>
+<tr>
+<td><b>BEGIN DATE: </b>novembro 2019</td>
+</tr>
+<tr>
+<td><b>End Date: </b>novembro 2019</td>
+</tr>
+<tr>
+<td><b>SUPERVISOR: </b><a href="https://www.di.uminho.pt/~jcr">José Carlos Ramalho</a></td>
+</tr>
+</table>
+<hr>
+</div>
+    <div class="w3-container">
+<h2>Workteam</h2>
+<table class="w3-table w3-striped">
+<tr>
+<th>Identifier</th>
+<th>Name</th>
+<th>Email</th>
+<th>Git</th>
+</tr>
+        <tr>
+<td>81736</td>
+<td>Marco Filipe Leitão Dantas</td>
+<td>a81736@alunos.uminho.pt</td>
+<td>https://github.com/Dantas198</td>
+</tr>
+    </table>
+<hr>
+</div>
+    <div class="w3-container">
+<h2>Abstract</h2>
+        <p>
+            Criação de um servidor em nodejs utilizando a framework express. Criação de um router para controlar pedidos à API e de 
+            routers para controlar os pedidos feitos à página web e que fazem pedidos à API. Irá ser utilizada
+            uma base de dados de prémios Nobel e gerida a partir do mongoDB.
+        </p>
+        <p>
+            O métodos encontrados na API são os que foram pedidos no exercício 1 da ficha <a href="http://www4.di.uminho.pt/~jcr/AULAS/didac/RepFichas/site/fichas/dweb2019-e2.html">dweb2019-e2</a>
+        </p>
+        <p>
+            Para além da API pedida foi criado um front-end para permitir a um utilizador fazer os pedidos que são permitidos. Este front-end
+            é constituído por páginas de índice, premios, categorias e laureados, onde podem ser vizualizados os pedidos feitos à API. 
+        </p>
+    <hr>
+</div>
+    <div class="w3-container">
+<h2>Deliverables</h2>
+<ol>
+        <li><a href="../premios/public/stylesheets/style.css">Stylesheet para os ficheiros html</a></li>
+        <li><a href="../premios/routes/api.js">Rotas possíveis para obter dados da API</a></li>
+        <li><a href="../premios/routes/index.js">Rota para fornecer a página de índice com as várias opções</a></li>
+        <li><a href="../premios/routes/premios.js">Rotas possíveis para obter dados relacionados com prémios</a></li>
+        <li><a href="../premios/routes/categorias.js">Rotas possíveis para obter dados relacionados com categorias</a></li>
+        <li><a href="../premios/routes/laureados.js">Rotas possíveis para obter dados relacionados com laureados</a></li>
+        <li><a href="../premios/views/lista-categorias.pug">Template para a página de listagem de categorias</a></li>
+        <li><a href="../premios/views/lista-laureados.pug">Template para a página de listagem de laureados</a></li>
+        <li><a href="../premios/views/lista-premios.pug">Template para a página de listagem de prémios</a></li>
+        <li><a href="../premios/views/premio.pug">Template para a página de informações detalhadas de um prémio nobel</a></li>
+        <li><a href="../premios/views/error.pug">Template para a página de erro</a></li>
+        <li><a href="../premios/views/index.pug">Template para a página principal da aplicação</a></li>
+        <li><a href="../premios/views/layout.pug">Template para o layout</a></li>
+        <li><a href="../premios/app.js">Ficheiro de configuração para a aplicação</a></li>
+        <li><a href="../premios/controllers/premios.js">Ficheiro que representa um controlador com funções que permitem efetuar operações à BD</a></li>
+        <li><a href="../premios/models/premios.js">Ficheiro com o modelo de um prémio</a></li>
+    </ol>
+<hr>
+</div>
+</body>
+</html>

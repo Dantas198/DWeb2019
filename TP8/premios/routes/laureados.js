@@ -12,5 +12,9 @@ router.get('/', function(req, res) {
         res.render('error', {error: erro})
         })
     })
-  
+    
+router.get('/*', function(req, res) {
+  res.render('error', {error: "O método GET não suporta esse caminho"})
+});
+
 module.exports = router;

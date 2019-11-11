@@ -7,27 +7,20 @@ router.get('/premios', function(req, res) {
   let l = Object.keys(req.query).length
   let categoria = req.query.categoria
   let data = req.query.data
-  switch(l){
-    case 0:
-      Premios.listar()
-             .then(dados => res.jsonp(dados))
-             .catch(error => res.status(500).jsonp(error))
-      break;
-    case 1:
-      Premios.listarC(categoria)
+  if(categoria && data){
+    Premios.listarCD(categoria, data)
+           .then(dados => res.jsonp(dados))
+           .catch(error => res.status(500).jsonp(error)) 
+  }else if(categoria){
+    Premios.listarC(categoria)
              .then(dados => res.jsonp(dados))
              .catch(error => res.status(500).jsonp(error)) 
-      break;
-    case 2:
-      Premios.listarCD(categoria, data)
+  }else{   
+      Premios.listar()
              .then(dados => res.jsonp(dados))
-             .catch(error => res.status(500).jsonp(error))    
-      break;
-    default:
-      res.status(500)
-      break;
-  }
+             .catch(error => res.status(500).jsonp(error))}
 });
+
 router.get('/premios/:id', function(req, res) {
   //var chaves = req.params.id.split('&')
   Premios.consultar(req.params.id)
