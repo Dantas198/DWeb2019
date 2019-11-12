@@ -14,10 +14,3 @@ block content
                             li  
                                 a(href= 'filmes/' + f.id)= f.title               
                 footer.w3-container.w3-teal
-            .w3-container
-                if(page > 0)
-                    a(href="/filmes/?page=" + page+1) Previous
-                if(page != limit){
-                    a(href="/filmes/?page=" + page-1) Next
-                    a(href="/filmes/?page=" + limit) Go to the end 
-                    }

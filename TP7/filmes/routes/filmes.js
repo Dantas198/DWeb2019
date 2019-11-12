@@ -4,11 +4,7 @@ var Filmes = require('../controllers/filmes')
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  var page = req.query.page;
-  if(page != undefined) page = Number(page)
-  if(!Number.isInteger(page) || page < 0) 
-    page=0
-  Filmes.listarPagina(page)
+  Filmes.listar()
     .then(dados => {
       res.render('index', {f : dados, page: page})
     })
