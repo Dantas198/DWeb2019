@@ -17,12 +17,12 @@
          <table class="w3-table">
             <tr>
                <td>
-                  <b>KEY NAME: </b>TP4
+                  <b>KEY NAME: </b>TP5
                </td>
             </tr>
             <tr>
                <td>
-                  <b>TITLE: </b>Contrução de um servidor em Node.js
+                  <b>TITLE: </b>Contrução de um servidor em Node.js para gestão de tarefas
                </td>
             </tr>
             <tr>
@@ -69,22 +69,10 @@
       <div class="w3-container">
          <h2>Abstract</h2>
          
-         <p>Construção de um servidor em Node.js para responder a pedidos de páginas de arqueossítios</p>
-         
-         <p>
-            As páginas dos arqueossítios são obtidas partindo do ficheiro 
-            <a href="arq.xml">arq</a> em 
-            diversas páginas xml de cada arqueossítio.
-            
-         </p>
-         
-         <p>
-            Estas páginas podem ser acedidas através de um 
-            <a href="index.html">indice</a>. Ao aceder a uma
-            página xml o servidor irá pedir uma stylesheet 
-            <a href="arq2html.xsl">xsl</a> para transformar a página 
-            xml em html.
-            
+         <p>Construção de um servidor em Node.js responsável por gerir tarefas. Esta gestão inclui
+            a criação de novas tarefas e 
+            a remoção de tarefas cuja data limite já expirou. Também poderão ser vizualizadas
+            todas as tarefas
          </p>
          
          <hr></hr>
@@ -95,23 +83,23 @@
          <ol>
             
             <li>
-               <a href="arq2html.xsl">Stylesheet para transformar uma página arq.xml em arq.html</a>
+               <a href="erro.pug">Ficheiro com o template para a página de erro que será mostrada no browser</a>
             </li>
             
             <li>
-               <a href="index.html">Indice de arqueossítios por concelhos</a>
+               <a href="front-page.pug">Ficheiro com o template para a página principal da gestão de tarefas</a>
             </li>
             
             <li>
-               <a href="index.xsl">Stylesheet que constroi o index.html</a>
+               <a href="layout.pub">Ficheiro com o layout para todos os outros templates</a>
             </li>
             
             <li>
-               <a href="xml-split.xsl">Stylesheet para separar os arqueossítios</a>
+               <a href="gestaoTarefas.js">Servidor que irá atender os pedidos</a>
             </li>
             
             <li>
-               <a href="servidor.js">Servidor para atender pedidos</a>
+               <a href="tarefas.json">Base de dados para as tarefas</a>
             </li>
             
          </ol>

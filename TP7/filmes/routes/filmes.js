@@ -4,9 +4,15 @@ var Filmes = require('../controllers/filmes')
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  Filmes.listar()
-    .then(dados => res.render('index', {lista: dados}))
-    .catch(erro => res.render('error', {error, erro}))
+  var page = req.query.page;
+  if(page != undefined) page = Number(page)
+  if(!Number.isInteger(page) || page < 0) 
+    page=0
+  Filmes.listarPagina(page)
+    .then(dados => {
+      res.render('index', {f : dados, page: page})
+    })
+    .catch(erro => res.render('error', {error: erro}))
   });
 
 router.get('/addform', function(req, res, next) {
@@ -32,7 +38,7 @@ router.get('/*', function(req, res) {
 
 router.post('/', function(req, res, next){
   Filmes.adicionar(req.body)
-    .then(res.redirect('/filmes'))
+    .then(dados => res.redirect('/filmes/' + dados._id))
     .catch(erro => res.render('error', {error, erro}))
 })
 
