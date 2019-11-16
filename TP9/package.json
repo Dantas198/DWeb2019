@@ -1,0 +1,15 @@
+{
+  "name": "tp9",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "node mongoImport.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "jsonfile": "^5.0.0",
+    "mongoose": "^5.7.10"
+  }
+}
