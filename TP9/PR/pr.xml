@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="../TP3/pr.xsl"?>
+<!DOCTYPE pr SYSTEM "pr.dtd">
+<pr>
+    <metadata>
+        <keyname>TP9</keyname>
+        <title>Implementação de uma ferramenta semelhante ao mongoimport, mas utilizando nodejs e mongoose</title>
+        <supervisor homepage="https://www.di.uminho.pt/~jcr">José Carlos Ramalho</supervisor>
+        <bdate>novembro 2019</bdate>
+        <edate>novembro 2019</edate>
+    </metadata>
+    <workteam>
+        <worker>
+            <identifier>81736</identifier>
+            <name>Marco Filipe Leitão Dantas</name>
+            <email>a81736@alunos.uminho.pt</email>
+            <git>https://github.com/Dantas198</git>
+        </worker>
+    </workteam>
+    <abstract>
+        <p>
+            Criação de um executável que irá importar uma base de dados a partir de um ficheiro JSON. Isto é feito através da criação de 
+            um esquema vazio e com uma estrutura não rígida e a partir dele é criado um modelo com o nome da coleção, para depois ser guardado
+            com os dados obtidos a partir de um leitura do ficheiro JSON.
+        </p>
+    </abstract>
+    <deliverables>
+        <deliverable path="../mongoImport.js">Ficheiro com o código fonte para correr o comando</deliverable>
+    </deliverables>
+</pr>
