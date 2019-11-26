@@ -38,8 +38,7 @@ for(var i = 0; i<req.files.length; i++){
       })
     
     novoFicheiro.save(function( err, ficheiro){
-      if (!err) {console.log("Ficheiro guardado com sucesso")
-    
+      if (!err) {console.log("Ficheiro guardado com sucesso") 
     }
       else console.log(err)
     })
