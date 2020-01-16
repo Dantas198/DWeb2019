@@ -1,0 +1,75 @@
+extends layout
+block content
+    .w3-container
+        .w3-card-4
+            header.w3-container
+                h1 Informações Base da Tipologia
+                .w3-container
+                    table.w3-table-all
+                        tr  
+                            th Estado
+                            th Sigla
+                            th Designacao
+                        tr 
+                            td= tipologia.estado
+                            td= tipologia.sigla
+                            td= tipologia.designacao
+            hr
+            .w3-container
+                h2 Elementos Pertencentes à Tipologia
+                if(elementos.length > 0)
+                    .w3-container
+                        table.w3-table-all
+                            tr  
+                                th Sigla
+                                th Designacao
+                            each e in elementos
+                                tr 
+                                    td= e.sigla
+                                    td= e.designacao
+                                    td
+                                        a(class='w3-button' href='/entidade/' + e.id)= e.id
+                else 
+                    p Não existem elementos nesta tipologia
+            hr
+            .w3-container
+                h2 Processos de que é dono
+                if(dono.length > 0)
+                    .w3-container
+                        table.w3-table-all
+                            tr  
+                                th Título
+                                th Id
+                                th Codigo
+                            each d in dono
+                                tr 
+                                    td= d.titulo
+                                    td= d.id
+                                    td
+                                        a(class='w3-button' href='http://clav.dglab.gov.pt/classes/consultar/c' + d.codigo)=d.codigo
+                else 
+                    p Não participa em nenhum
+            hr
+            .w3-container
+                h2 Processos em que participa
+                if(participante.length > 0)
+                    .w3-container
+                        table.w3-table-all
+                            tr  
+                                th tipoPar
+                                th Codigo
+                                th Título
+                                th Id
+                            each p in participante
+                                tr 
+                                    td= p.tipoPar
+                                    td
+                                        a(class='w3-button' href='http://clav.dglab.gov.pt/classes/consultar/c' + p.codigo)=p.codigo
+                                    td= p.titulo
+                                    td= p.id
+                else 
+                    p Não participa em nenhum
+        .w3-container
+        footer.w3-container.w3-teal
+            a(href='javascript:window.history.back()').w3-button Página anterior
+            a(href='/').w3-button Página Inicial

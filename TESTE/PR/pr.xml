@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pr SYSTEM "pr.dtd">
+<pr>
+    <metadata>
+        <keyname>Avaliação</keyname>
+        <title>Teste de Avaliação 2020</title>
+        <supervisor homepage="https://www.di.uminho.pt/~jcr">José Carlos Ramalho</supervisor>
+        <bdate>janeiro 2020</bdate>
+        <edate>janeiro 2020</edate>
+    </metadata>
+    <workteam>
+        <worker>
+            <identifier>81736</identifier>
+            <name>Marco Filipe Leitão Dantas</name>
+            <email>a81736@alunos.uminho.pt</email>
+            <git>https://github.com/Dantas198</git>
+        </worker>
+    </workteam>
+    <abstract>
+        <xref url= "https://github.com/Dantas198/DWeb2019">link dos exercicios resolvidos<xref>
+        <p><b>Exercício 1<b>: Foi utilizado mais do que um servidor, mais concretamente o servidor Mongo e servidor Node, posto isto é 
+        necessário correr o comando <b>npm i mongoose<b> e certeficarmo-nos que o Node não corre na mesma porta de o Mongo. Neste caso o Node
+        corre na porta 3000. O dataset utilizado foi convertido de xml para json utilizando um website comum, disponível em qualquer lado, depois
+        foram retirados os "@" para não haver conflitos. O dataset é importado através do comando "mongoimport -d obras -c obras --jasonArray .\obras.json".
+        O ficheiro json encontra-se na diretoria TESTE.
+        </p>
+        <p>
+        <b>Exercício 2<b>: As resposta às queries pedidas encontram-se num ficheiro de texto também na diretoria TESTE/exercicio2 da página do github. Para este 
+        exercício é necessário correr o comando <b>npm i axios<b> para além dos habituais
+        </p>
+    </abstract>
+    <deliverables>
+        <deliverable path="exercicio1">Diretoria com a resolução do exercicio 1</deliverable>
+        <deliverable path="exercicio2">Diretoria com a resolução do exercicio 2</deliverable>
+        <deliverable path="pr.xml">Ficheiro pr</deliverable>
+        <deliverable path="exercicio2/exercicio1.txt">Ficheiro de texto com resposta à pergunta 1</deliverable>
+    </deliverables>
+</pr>
